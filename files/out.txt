@@ -1,0 +1,4 @@
+NEG
+NEU
+NEG
+NEU

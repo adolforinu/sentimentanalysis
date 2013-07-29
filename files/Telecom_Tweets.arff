@@ -1,0 +1,140 @@
+% Tuits de entrenamiento para los clasificadores
+% Mismo conjunto de muestra utilizado para el diccionario
+
+@relation Telecom_Tweets
+
+@attribute text string
+@attribute @@class@@ {pos,neg}
+
+@data
+
+' le pide saldo a los de personal no le pasan se muda a  ',pos
+'bien ahi hbo fre  ',pos
+'verdad gracias tigo xtraer a ese grupo peo el abrazo nos merecemos nosotros por invertir nuestra plata ahi  ',pos
+'2 hay plus wifi en el camarote chera  ',pos
+'en serio libera _emopos_  ',pos
+'punto para que libera" hbo este domingo para ver el estreno de la 3ra temporada de game of thrones "  ',pos
+'ya son 5 avisos de llamadas perdidas trabajo en un medio de comunicacion mejoren sus servicios me voy a  ',pos
+'un lujo el internet wifi por cable de velocidad y estabilidad mejor decision enluque  ',pos
+'buenisima musica thekillerpy  ',pos
+'que no puedo crer ah _emopos_  ',pos
+'gracias tigo lo mejor de lo mejor  ',pos
+'_emopos_  ',pos
+'al fin algo bueno sres  ',pos
+'bien ahi  ',pos
+'buenisimo gracias  ',pos
+'felicidades  ',pos
+'felicidades _emopos_  ',pos
+'felicidades tigo _emopos_ mi sueño es tigo paraguay _emopos_  ',pos
+'gracias totales  ',pos
+'gracias espero mas fotos y de la gente del vip tambien son lo mejor _emopos_  ',pos
+'habemus señal en el concierto gracias tigo  ',pos
+'la primera en vaticinar la debacle de la seleccion nacional tb q grande  ',pos
+'que buena noticia enserio les amo carajo _emopos_  ',pos
+'que increible _emopos_  ',pos
+' fail total la publicidad del taxista de ahora mismo   ',neg
+' teacuerdascuando te reias por la propaganda "que mostro" y no te robaba tanto   ',neg
+'siempre roban  ',neg
+'mopio tigo deja de robar   ',neg
+'sonrei  tigo te jode  roba y asesina tu saldo  ',neg
+'por la culpa de la propaganda de perdimos y gracias al taxista q se presto     ',neg
+'kore tu publicidad pro-haedo saca ya por favor  estas haciendo papelon   _emoneg_ pudranse tigo  ',neg
+'tengo conexion de va a terminar la semana santa para cuando descargue todo      ',neg
+'los d  tigotv tardaron 10 dias n atendr mi reclamo porq n soy gnte publica @tigo_paraguay s un kilombo  call cntr bien gracias   ',neg
+'sos masoquista fatima  eso es  ',neg
+'tigo te esta fastidiando la vida paola  ',neg
+'tigo sos una mierda    cc  ',neg
+'tampoco asi claro roba menos  ',neg
+'estoy podrido de haedo y ustedes de que pagan para que el jueguejajajajajajajaja auspicio a full q pucha  ',neg
+'con eso nos quieren decir que nos joden como profesionales o con estilo   ',neg
+'no zoey no tiene la culpa de eso  son los de _emoneg_      ',neg
+'tantas quejas ya he escuchado y leido de yo que vos me mudo a realmente excelente servicio  ',neg
+'que servicio de mierda  no hay señal por semana santa pio asereje ja deje dejeve dhshshsj  ',neg
+'me imagino que ya mando quemar su putisima publicidad de la vieja chota de haedo valdez verdad   hahaha  ',neg
+'encima te cortan la internet y igual te chupa todo tu paquetes de datos  son todos ladrones de guante blanco este  ',neg
+'nuestro sistema esta teniendo problemas" - siempre con la misma excusa " a vos tambien te troleo  jajaja  ',neg
+'estoy pensando seriamente en hacer la portabilidad  tigodemierda nos mudamos todos mierda  ',neg
+'maldito seas  ',neg
+'su servicio es una mierda  encima tardan años en atender una maldita llamada  yo me voy a mudar a vox o que  ',neg
+'hablando con mi culo cambio y fuera _emopos_ _emopos_ _emopos_ _emopos_ _emopos_ _emopos_ _emopos_ _emopos_ _emopos_ _emopos_ _emopos_ tigo no tkm erema  ',neg
+'la atencion telefonica de es l-a-m-e-n-t-a-b-l-e escuchaste "el tiempo de espera es mayor a 6 minutos" jaja  ',neg
+'y sin embargo me sigo quedando sin señal en el campus de la una  no sos el unico  vos  yo y otros mas   ',neg
+'yo no sali "sorteada" para los canales fre de esta semana  discriminacion  ',neg
+'a mi me quito mis 80 mil de plan al dia siguiente de cargar  ando a paquetigos para redes sociales _emoneg_  ',neg
+'lo unico que hacen todo el dia es robar saldo  siempre con su excusa de que tienen problemas con el sistema  ',neg
+'claro  pero todavia no estoy ni en el interior y mi internet ya anda para el culo  ',neg
+'como se nota que su cm es un lameculos de gente que conoce todos pagamos su mal servicio lrmpqlp   ',neg
+'mas ladrones que ustedes imposible miren como consumen mi saldo sin que yo realize nada  ',neg
+'me vas a matar porque mierda no hay señal de internet  al pedo pago mi plan   hasta la cobertura te roban  ',neg
+'muy malo su internet de modem   ',neg
+'sera que se pueden dignar a atender su call center  gran 7 demasiado mucho ya llame  despues rapido cortan si no se paga   ',neg
+'tembo lo que son plaga partida mondaja peike penderevikuape con cariño :el lechero  ',neg
+'y por que consume mi saldo siendo que no realize ninguno operacion donde se fue mi saldo no mas quiero saber que mierda son  ',neg
+'"nuestro sistema esta teniendo problemas" - siempre con la misma excusa   ',neg
+'_emoneg_  ',neg
+'  hola  cuando van a dejar de robar   ',neg
+'  hay q llamar 5 veces para q entre la llamada  lastimosamente la antena q instalamos en el chaco es p  tigo  por eso no    ',neg
+'acaban de perder un cliente  son unos incompetentes de la gran 7   ',neg
+'ahora se dan cuenta que son unas reverendas mierdas  despues d hacer la propaganda con el taxista ese  son unas cacas   ',neg
+'apersar de su pesima atencion y pesimo servicio ah tamb el mas caro del mercado  ',neg
+'ayer yo hice prestamos y despues un paquetigo de internet por 24 horas y saben que  jamas me funciono choros inutiles  ',neg
+'cambien de telefonia tigo te falla en el momento en que mas necesitas el servicio  hoy me fallo a mi  mañana te fallara a ti   ',neg
+'como pico si ahora utilizo mi plan despues de tres meses  un desastre su servicio  q alguien me atienda en atencion al client  ',neg
+'con lo mierda que son en twiter no hace falta verificacion para saber que son el verdadero tigo  ',neg
+'cornudo   ',neg
+'cuando mejoren sus servicios pienso felicitarlos   ',neg
+'cuando obtengan una iso 901 festejen  no por esta boludez   ',neg
+'cuenta verificada  y verifico tambien que su servicio es una mierda  ',neg
+'de 30 dias 29 llamo a quejarme d su servicio d internet y nunca me solucionan pero uds estan orgullosos de ser primeros en tw  ',neg
+'de ladrones tambien  ',neg
+'de que le sirve tener cuenta en twiter si son una mierda como empresa  idiotas   ',neg
+'de que sirve tener una cuenta verificada  si su servicio sigue siendo asqueroso    ',neg
+'deberian de estar orgullosos si en vez de ofrecer un servicio pesimo ofrecen soluciones   ',neg
+'deja de mentir si todavia no empezaron a tocar  vende humo   ',neg
+'dejen de robarme   no puedo hacer paquetigos internet  ',neg
+'delincuente  delincuente  delincuente  delincuente  delincuente  delincuente  delincuente  delincuente  delincuente   ',neg
+'desde el lunes se viene reclamando que no funciona el decodificador de hd y ni siquiera pasan a ver  con fibertel no era asi  ',neg
+'el lunes voy a su casa central  porque tengo que ir yo a solucionar un problema de ustedes  y paso directamente a  ',neg
+'en aregua no hay antena de tigo o que  nunca tengo señal  estoy al dia con mi pago encima   ',neg
+'eremao tigo  igual el servicio es un desastre d:  ',neg
+'es el sponsor oficial de los fracasados  y el nuevo mariscal de la derota  vayanse del pais manga de ladrones   ',neg
+'espero que con lo que le paso hoy a la selecc por fin sepan que ustedes y sus famosos fueron y son la yeta detras de seleccn  ',neg
+'estoy al dia con ustedes por lo menos un servicio decente quiero es mucho pedir  siempre lo mismo  va y viene la señal  ',neg
+'estoy con red inhabilitada  solucionenme el problema ya   ',neg
+'felicidades por la cuenta verificada  eso significa que es un merito por ser los mejores en robar descaradamente _emopos_  ',neg
+'flor de ratas lo que son  dejen ya de robar  ',neg
+'hablando con mi culo cambio y fuera _emopos_ _emopos_ _emopos_ _emopos_ _emopos_ _emopos_ _emopos_ _emopos_ _emopos_ _emopos_ _emopos_ tigo no tkm  ',neg
+'hasta en eso mentis tigo jajaja todavia nada   ',neg
+'horarios de atencion  encima que tardan media hora en atender ahora podran horarios  ah ya viva la portabilidad   ',neg
+'increible no anda el servicio para el pago de factura hasta eso   zona villa aurelia  ',neg
+'inutiles  ',neg
+'jamas me respondieron  que barbaro   ',neg
+'la mufa de la seleccion   ',neg
+'la puta  ahora que estoy mas nervioso me dejas sin señal  no se luego ni para que me estoy plagueando mas   ',neg
+'ladrones  ',neg
+'ladrones  ',neg
+'lo que jode no es que tarden 3 dias  jode que hayan prometido y que despues no cumplan nomas   ',neg
+'me podrian explicar porque cada vez que se necesita algun servicio suyo nunca esta disponible  es imposible que no prevean   ',neg
+'me tiene por las pelotas el servicio de mierda que ofrecen   ',neg
+'mi 3g no anda y mañana me voy a ir al interior y si aca en ñemby no anda no queres ver lo que va ser en paraguari   ',neg
+'necesito que me habiliten la linea _emoneg_  ',neg
+'no es verificar el servicio  no funciona  verificame quien me trae hoy un nuevo decodificador  ',neg
+'no funciona mi internet  no funciona se va cada 5 segundos la senhal  ',neg
+'no la pega una con su publicidad  primero el loro estafador ahora el taxista mala onda   ',neg
+'no pienso volver a explicar algo por cuarta vez  una verguenza el trato de sus "representantes"   ',neg
+'no puedo alzar una foto hace mil horas  que lo que es problema   ',neg
+'para de robar   ',neg
+'para tigo tv tenes que esperar una semana para que te solucionen el problema se pasan mintiendo los del call center  ',neg
+'parece q hay q ser mbore unicament con uds  solucionenme ya carajo mi problema d señal   dsd ayer estan jodiendome   ',neg
+'parece que se quiere burlar de nosotros ya tienen que suspender la propaganda  ',neg
+'pero esta con problemas el sistema  o solo a mi no me funciona nada  cargue 20mil y no puedo hacer paquete de datos   ',neg
+'pero la de peor atencion al cliente   ',neg
+'pesimo absoluto el servicio de tigo  lastima como estafan  ya me mude a personal nuevamente  ',neg
+'pesimo el servicio de atencion a clientes y el servicio en general  ojala todos hagan la portabilidad  ',neg
+'por que esta en mantenimiento la cagada de paquetigo  sinceramente decepcionante es contigo  ',neg
+'por que mi paquete de datos de internet se cuelga a cada rato  su servicio es pesimo   ',neg
+'porfavor dejen de robarme  ya no disimulan ma luego  porque pio a mi   ',neg
+'porque es tan dificil comunicarse con uds    ',neg
+'porque lo que guau se ofrecen a ayudar si saben bien que nadie trabaja en tigo toda esta semana  falsos   ',neg
+'porque sos tan mierda  porque  porque   porque   ',neg
+'que porqueria el servicio de tigo   ',neg
