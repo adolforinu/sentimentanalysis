@@ -146,6 +146,11 @@ public class Preprocess {
         line = line.replace("/", " ");
         line = line.replace(".", " ");
         line = line.replace(",", " ");
+        line = line.replace("\""," ");
+        line = line.replace(":"," ");
+        line = line.replace("-"," ");
+        line = line.replace("_"," ");
+        line = line.replace("="," ");
         return line;
     }
     public String removeSymbols(String line) {

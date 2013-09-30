@@ -6,6 +6,7 @@
 package sentimentanalysis;
 
 import algorithms.*;
+import wekaevaluation.*;
 
 /**
  *
@@ -21,8 +22,12 @@ public class Main {
 //        sc.run();
 //        ArffGenerator ag = new ArffGenerator ();
 //        ag.generate();
-        NaiveBayes nb = new NaiveBayes();
-        nb.run();
+//        NaiveBayes nb = new NaiveBayes();
+//        nb.run();
+//        BayesClassifier bc = new BayesClassifier();
+//        bc.run();
+          SVMClassifier svmc = new SVMClassifier();
+          svmc.run();
     }
 
 }
