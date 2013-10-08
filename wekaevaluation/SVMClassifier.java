@@ -56,10 +56,6 @@ public class SVMClassifier {
                             svm.setDegree(degree);
                             svm.setGamma(gamma);
                             svm.setDebug(false);
-                            System.out.println("c0: " + svm.getCoef0());
-                            System.out.println("cost: " + svm.getCost());
-                            System.out.println("degree: " + svm.getDegree());
-                            System.out.println("gamma: " + svm.getGamma());
                             svm.buildClassifier(data);
                             this.classifyAndSummarize(svm, data, "UNBALANCED,TRAINING_SET,LIN,");
                             gamma = gamma * Double.valueOf(10);
@@ -171,10 +167,6 @@ public class SVMClassifier {
                             svm.setDegree(degree);
                             svm.setGamma(gamma);
                             svm.setDebug(false);
-                            System.out.println("c0: " + svm.getCoef0());
-                            System.out.println("cost: " + svm.getCost());
-                            System.out.println("degree: " + svm.getDegree());
-                            System.out.println("gamma: " + svm.getGamma());
                             svm.buildClassifier(data);
                             this.classifyAndSummarize(svm, test, "UNBALANCED,EVAL_SET,RAD,");
                             gamma = gamma * Double.valueOf(10);
@@ -333,8 +325,8 @@ public class SVMClassifier {
 
     /*
      * @param svm - The LibSVM object reference
-     * @Instances - The Instances collection reference
-     * @header - The DISTRIBUION,TESTED_ON,KERNEL_TYPE, values for the output
+     * @param instances - The Instances collection reference
+     * @param header - The DISTRIBUION,TESTED_ON,KERNEL_TYPE, values for the output
      */
     private void classifyAndSummarize(LibSVM svm, Instances instances, String header) {
         int corrects = 0;
@@ -362,6 +354,9 @@ public class SVMClassifier {
         }
     }
 
+    /*
+     * @param kernelType - Identifier for kernel type selected
+     */
     private LibSVM setNewClassifier(int kernelType) {
         LibSVM svm = new LibSVM();
         weka.core.SelectedTag tagKernel = new weka.core.SelectedTag(kernelType, LibSVM.TAGS_KERNELTYPE);
