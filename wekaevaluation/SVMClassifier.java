@@ -18,6 +18,16 @@ public class SVMClassifier {
     private final String BALANCED_TRAIN_FILE = "C:/files/ent_bal.arff";
     private final String BALANCED_EVAL_FILE = "C:/files/test_bal.arff";
     private final String OUTPUT_FILE = "C:/files/svm.csv";
+    // From 2^MIN to 2^MAX (+1)
+    private final int MIN_COEF0 = 0;
+    private final int MAX_COEF0 = 13;
+    // From 2^MIN to 2^MAX (+1)
+    private final int MIN_COST = 0;
+    private final int MAX_COST = 13;
+    // From MIN to MAX (+1)
+    private final int MIN_DEGREE = 0;
+    private final int MAX_DEGREE = 10;
+    double gamma;
     BufferedReader reader = null;
     BufferedWriter output = null;
 
@@ -35,41 +45,143 @@ public class SVMClassifier {
 
             // <editor-fold defaultstate="collapsed" desc="Linear - Training set">
             LibSVM svm = this.setNewClassifier(LibSVM.KERNELTYPE_LINEAR);
-            svm.buildClassifier(data);
-            this.classifyAndSummarize(svm, data, "UNBALANCED,TRAINING_SET,LIN,");
+            System.out.println("Number of Attributes: " + data.numAttributes());
+            for (int coef0 = MIN_COEF0; coef0 <= MAX_COEF0; coef0++){
+                for (int cost = MIN_COST; cost <= MAX_COST; cost++){
+                    for (int degree = MIN_DEGREE; degree <= MAX_DEGREE; degree++){
+                        gamma = 1 / Double.valueOf(data.numAttributes());
+                        while (gamma <= 1){
+                            svm.setCoef0(Math.pow(Double.valueOf(2), Double.valueOf(coef0)));
+                            svm.setCost(Math.pow(Double.valueOf(2), Double.valueOf(cost)));
+                            svm.setDegree(degree);
+                            svm.setGamma(gamma);
+                            svm.setDebug(false);
+                            System.out.println("c0: " + svm.getCoef0());
+                            System.out.println("cost: " + svm.getCost());
+                            System.out.println("degree: " + svm.getDegree());
+                            System.out.println("gamma: " + svm.getGamma());
+                            svm.buildClassifier(data);
+                            this.classifyAndSummarize(svm, data, "UNBALANCED,TRAINING_SET,LIN,");
+                            gamma = gamma * Double.valueOf(10);
+                        }
+                    }
+                }
+            }
             // </editor-fold>
 
             // <editor-fold defaultstate="collapsed" desc="Linear - Test set">
             reader = new BufferedReader(new FileReader(UNBALANCED_EVAL_FILE));
             Instances test = new Instances(reader);
             test.setClassIndex(test.numAttributes() - 1);
-            this.classifyAndSummarize(svm, test, "UNBALANCED,EVAL_SET,LIN,");
+            for (int coef0 = MIN_COEF0; coef0 <= MAX_COEF0; coef0++){
+                for (int cost = MIN_COST; cost <= MAX_COST; cost++){
+                    for (int degree = MIN_DEGREE; degree <= MAX_DEGREE; degree++){
+                        gamma = 1 / Double.valueOf(data.numAttributes());
+                        while (gamma <= 1){
+                            svm.setCoef0(Math.pow(Double.valueOf(2), Double.valueOf(coef0)));
+                            svm.setCost(Math.pow(Double.valueOf(2), Double.valueOf(cost)));
+                            svm.setDegree(degree);
+                            svm.setGamma(gamma);
+                            svm.setDebug(false);
+                            svm.buildClassifier(data);
+                            this.classifyAndSummarize(svm, test, "UNBALANCED,EVAL_SET,LIN,");
+                            gamma = gamma * Double.valueOf(10);
+                        }
+                    }
+                }
+            }
             // </editor-fold>
 
             // <editor-fold defaultstate="collapsed" desc="Polynomial - Training set">
             svm = this.setNewClassifier(LibSVM.KERNELTYPE_POLYNOMIAL);
-            svm.buildClassifier(data);
-            this.classifyAndSummarize(svm, data, "UNBALANCED,TRAINING_SET,POL,");
+            for (int coef0 = MIN_COEF0; coef0 <= MAX_COEF0; coef0++){
+                for (int cost = MIN_COST; cost <= MAX_COST; cost++){
+                    for (int degree = MIN_DEGREE; degree <= MAX_DEGREE; degree++){
+                        gamma = 1 / Double.valueOf(data.numAttributes());
+                        while (gamma <= 1){
+                            svm.setCoef0(Math.pow(Double.valueOf(2), Double.valueOf(coef0)));
+                            svm.setCost(Math.pow(Double.valueOf(2), Double.valueOf(cost)));
+                            svm.setDegree(degree);
+                            svm.setGamma(gamma);
+                            svm.setDebug(false);
+                            svm.buildClassifier(data);
+                            this.classifyAndSummarize(svm, data, "UNBALANCED,TRAINING_SET,POL,");
+                            gamma = gamma * Double.valueOf(10);
+                        }
+                    }
+                }
+            }
             // </editor-fold>
 
             // <editor-fold defaultstate="collapsed" desc="Polynomial - Test set">
             reader = new BufferedReader(new FileReader(UNBALANCED_EVAL_FILE));
             test = new Instances(reader);
             test.setClassIndex(test.numAttributes() - 1);
-            this.classifyAndSummarize(svm, test, "UNBALANCED,EVAL_SET,POL,");
+            for (int coef0 = MIN_COEF0; coef0 <= MAX_COEF0; coef0++){
+                for (int cost = MIN_COST; cost <= MAX_COST; cost++){
+                    for (int degree = MIN_DEGREE; degree <= MAX_DEGREE; degree++){
+                        gamma = 1 / Double.valueOf(data.numAttributes());
+                        while (gamma <= 1){
+                            svm.setCoef0(Math.pow(Double.valueOf(2), Double.valueOf(coef0)));
+                            svm.setCost(Math.pow(Double.valueOf(2), Double.valueOf(cost)));
+                            svm.setDegree(degree);
+                            svm.setGamma(gamma);
+                            svm.setDebug(false);
+                            svm.buildClassifier(data);
+                            this.classifyAndSummarize(svm, test, "UNBALANCED,EVAL_SET,POL,");
+                            gamma = gamma * Double.valueOf(10);
+                        }
+                    }
+                }
+            }
             // </editor-fold>
 
             // <editor-fold defaultstate="collapsed" desc="Radial Basis - Training set">
             svm = this.setNewClassifier(LibSVM.KERNELTYPE_RBF);
-            svm.buildClassifier(data);
-            this.classifyAndSummarize(svm, data, "UNBALANCED,TRAINING_SET,RAD,");
+            for (int coef0 = MIN_COEF0; coef0 <= MAX_COEF0; coef0++){
+                for (int cost = MIN_COST; cost <= MAX_COST; cost++){
+                    for (int degree = MIN_DEGREE; degree <= MAX_DEGREE; degree++){
+                        gamma = 1 / Double.valueOf(data.numAttributes());
+                        while (gamma <= 1){
+                            svm.setCoef0(Math.pow(Double.valueOf(2), Double.valueOf(coef0)));
+                            svm.setCost(Math.pow(Double.valueOf(2), Double.valueOf(cost)));
+                            svm.setDegree(degree);
+                            svm.setGamma(gamma);
+                            svm.setDebug(false);
+                            svm.buildClassifier(data);
+                            this.classifyAndSummarize(svm, data, "UNBALANCED,TRAINING_SET,RAD,");
+                            gamma = gamma * Double.valueOf(10);
+                        }
+                    }
+                }
+            }
             // </editor-fold>
 
             // <editor-fold defaultstate="collapsed" desc="Radial Basis - Test set">
             reader = new BufferedReader(new FileReader(UNBALANCED_EVAL_FILE));
             test = new Instances(reader);
             test.setClassIndex(test.numAttributes() - 1);
-            this.classifyAndSummarize(svm, test, "UNBALANCED,EVAL_SET,RAD,");
+            for (int coef0 = MIN_COEF0; coef0 <= MAX_COEF0; coef0++){
+                for (int cost = MIN_COST; cost <= MAX_COST; cost++){
+                    for (int degree = MIN_DEGREE; degree <= MAX_DEGREE; degree++){
+                        gamma = 1 / Double.valueOf(data.numAttributes());
+                        while (gamma <= 1){
+                            svm.setCoef0(Math.pow(Double.valueOf(2), Double.valueOf(coef0)));
+                            svm.setCost(Math.pow(Double.valueOf(2), Double.valueOf(cost)));
+                            svm.setDegree(degree);
+                            svm.setGamma(gamma);
+                            svm.setDebug(false);
+                            System.out.println("c0: " + svm.getCoef0());
+                            System.out.println("cost: " + svm.getCost());
+                            System.out.println("degree: " + svm.getDegree());
+                            System.out.println("gamma: " + svm.getGamma());
+                            svm.buildClassifier(data);
+                            this.classifyAndSummarize(svm, test, "UNBALANCED,EVAL_SET,RAD,");
+                            gamma = gamma * Double.valueOf(10);
+                        }
+                    }
+                }
+            }
             // </editor-fold>
 
             /***** BALANCED *****/
@@ -80,41 +192,134 @@ public class SVMClassifier {
 
             // <editor-fold defaultstate="collapsed" desc="Linear - Training set">
             svm = this.setNewClassifier(LibSVM.KERNELTYPE_LINEAR);
-            svm.buildClassifier(data);
-            this.classifyAndSummarize(svm, data, "BALANCED,TRAINING_SET,LIN,");
+            for (int coef0 = MIN_COEF0; coef0 <= MAX_COEF0; coef0++){
+                for (int cost = MIN_COST; cost <= MAX_COST; cost++){
+                    for (int degree = MIN_DEGREE; degree <= MAX_DEGREE; degree++){
+                        gamma = 1 / Double.valueOf(data.numAttributes());
+                        while (gamma <= 1){
+                            svm.setCoef0(Math.pow(Double.valueOf(2), Double.valueOf(coef0)));
+                            svm.setCost(Math.pow(Double.valueOf(2), Double.valueOf(cost)));
+                            svm.setDegree(degree);
+                            svm.setGamma(gamma);
+                            svm.setDebug(false);
+                            svm.buildClassifier(data);
+                            this.classifyAndSummarize(svm, data, "BALANCED,TRAINING_SET,LIN,");
+                            gamma = gamma * Double.valueOf(10);
+                        }
+                    }
+                }
+            }
             // </editor-fold>
 
             // <editor-fold defaultstate="collapsed" desc="Linear - Test set">
             reader = new BufferedReader(new FileReader(BALANCED_EVAL_FILE));
             test = new Instances(reader);
             test.setClassIndex(test.numAttributes() - 1);
-            this.classifyAndSummarize(svm, test, "BALANCED,EVAL_SET,LIN,");
+            for (int coef0 = MIN_COEF0; coef0 <= MAX_COEF0; coef0++){
+                for (int cost = MIN_COST; cost <= MAX_COST; cost++){
+                    for (int degree = MIN_DEGREE; degree <= MAX_DEGREE; degree++){
+                        gamma = 1 / Double.valueOf(data.numAttributes());
+                        while (gamma <= 1){
+                            svm.setCoef0(Math.pow(Double.valueOf(2), Double.valueOf(coef0)));
+                            svm.setCost(Math.pow(Double.valueOf(2), Double.valueOf(cost)));
+                            svm.setDegree(degree);
+                            svm.setGamma(gamma);
+                            svm.setDebug(false);
+                            svm.buildClassifier(data);
+                            this.classifyAndSummarize(svm, test, "BALANCED,EVAL_SET,LIN,");
+                            gamma = gamma * Double.valueOf(10);
+                        }
+                    }
+                }
+            }
             // </editor-fold>
 
             // <editor-fold defaultstate="collapsed" desc="Polynomial - Training set">
             svm = this.setNewClassifier(LibSVM.KERNELTYPE_POLYNOMIAL);
-            svm.buildClassifier(data);
-            this.classifyAndSummarize(svm, data, "BALANCED,TRAINING_SET,POL,");
+            for (int coef0 = MIN_COEF0; coef0 <= MAX_COEF0; coef0++){
+                for (int cost = MIN_COST; cost <= MAX_COST; cost++){
+                    for (int degree = MIN_DEGREE; degree <= MAX_DEGREE; degree++){
+                        gamma = 1 / Double.valueOf(data.numAttributes());
+                        while (gamma <= 1){
+                            svm.setCoef0(Math.pow(Double.valueOf(2), Double.valueOf(coef0)));
+                            svm.setCost(Math.pow(Double.valueOf(2), Double.valueOf(cost)));
+                            svm.setDegree(degree);
+                            svm.setGamma(gamma);
+                            svm.setDebug(false);
+                            svm.buildClassifier(data);
+                            this.classifyAndSummarize(svm, data, "BALANCED,TRAINING_SET,POL,");
+                            gamma = gamma * Double.valueOf(10);
+                        }
+                    }
+                }
+            }
             // </editor-fold>
 
             // <editor-fold defaultstate="collapsed" desc="Polynomial - Test set">
             reader = new BufferedReader(new FileReader(BALANCED_EVAL_FILE));
             test = new Instances(reader);
             test.setClassIndex(test.numAttributes() - 1);
-            this.classifyAndSummarize(svm, test, "BALANCED,EVAL_SET,POL,");
+            for (int coef0 = MIN_COEF0; coef0 <= MAX_COEF0; coef0++){
+                for (int cost = MIN_COST; cost <= MAX_COST; cost++){
+                    for (int degree = MIN_DEGREE; degree <= MAX_DEGREE; degree++){
+                        gamma = 1 / Double.valueOf(data.numAttributes());
+                        while (gamma <= 1){
+                            svm.setCoef0(Math.pow(Double.valueOf(2), Double.valueOf(coef0)));
+                            svm.setCost(Math.pow(Double.valueOf(2), Double.valueOf(cost)));
+                            svm.setDegree(degree);
+                            svm.setGamma(gamma);
+                            svm.setDebug(false);
+                            svm.buildClassifier(data);
+                            this.classifyAndSummarize(svm, test, "BALANCED,EVAL_SET,POL,");
+                            gamma = gamma * Double.valueOf(10);
+                        }
+                    }
+                }
+            }
             // </editor-fold>
 
             // <editor-fold defaultstate="collapsed" desc="Radial Basis - Training set">
             svm = this.setNewClassifier(LibSVM.KERNELTYPE_RBF);
-            svm.buildClassifier(data);
-            this.classifyAndSummarize(svm, data, "BALANCED,TRAINING_SET,RAD,");
+            for (int coef0 = MIN_COEF0; coef0 <= MAX_COEF0; coef0++){
+                for (int cost = MIN_COST; cost <= MAX_COST; cost++){
+                    for (int degree = MIN_DEGREE; degree <= MAX_DEGREE; degree++){
+                        gamma = 1 / Double.valueOf(data.numAttributes());
+                        while (gamma <= 1){
+                            svm.setCoef0(Math.pow(Double.valueOf(2), Double.valueOf(coef0)));
+                            svm.setCost(Math.pow(Double.valueOf(2), Double.valueOf(cost)));
+                            svm.setDegree(degree);
+                            svm.setGamma(gamma);
+                            svm.setDebug(false);
+                            svm.buildClassifier(data);
+                            this.classifyAndSummarize(svm, data, "BALANCED,TRAINING_SET,RAD,");
+                            gamma = gamma * Double.valueOf(10);
+                        }
+                    }
+                }
+            }
             // </editor-fold>
 
             // <editor-fold defaultstate="collapsed" desc="Radial Basis - Test set">
             reader = new BufferedReader(new FileReader(BALANCED_EVAL_FILE));
             test = new Instances(reader);
             test.setClassIndex(test.numAttributes() - 1);
-            this.classifyAndSummarize(svm, test, "BALANCED,EVAL_SET,RAD,");
+            for (int coef0 = MIN_COEF0; coef0 <= MAX_COEF0; coef0++){
+                for (int cost = MIN_COST; cost <= MAX_COST; cost++){
+                    for (int degree = MIN_DEGREE; degree <= MAX_DEGREE; degree++){
+                        gamma = 1 / Double.valueOf(data.numAttributes());
+                        while (gamma <= 1){
+                            svm.setCoef0(Math.pow(Double.valueOf(2), Double.valueOf(coef0)));
+                            svm.setCost(Math.pow(Double.valueOf(2), Double.valueOf(cost)));
+                            svm.setDegree(degree);
+                            svm.setGamma(gamma);
+                            svm.setDebug(false);
+                            svm.buildClassifier(data);
+                            this.classifyAndSummarize(svm, test, "BALANCED,EVAL_SET,RAD,");
+                            gamma = gamma * Double.valueOf(10);
+                        }
+                    }
+                }
+            }
             // </editor-fold>
 
             // Finish
