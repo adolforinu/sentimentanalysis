@@ -1,0 +1,28 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\newcommand{\grado}{\hspace{-2mm}$\phantom{a}^{\circ}$}
+
+\begin{document}
+
+\tableofcontents
+
+\pagenumbering{Roman}
+\listoffigures
+\addcontentsline{toc}{chapter}{Lista de Figuras}
+\listoftables
+\addcontentsline{toc}{chapter}{Lista de Tablas}
+\include{acronimos}
+\include{simbolos}
+
+\pagenumbering{arabic}
+\include{introduccion}
+1\include{mineria}
+\include{formulacion}
+\include{resultados}
+\include{conclusiones}
+\include{bibliografia}
+\include{anexos}
+
+\end{document}

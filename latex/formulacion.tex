@@ -1,0 +1,26 @@
+\chapter{Formulaci\'on del problema propuesto}\label{formulacion}
+
+\paragraph{En este cap\'itulo van:}
+\paragraph{Introducci\'on (Presentaci\'on del caso de an\'alisis)}
+\paragraph{Modelo conceptual (selecci\'on de atributos, etc)}
+\paragraph{Objetivos y criterios de \'exito}
+\paragraph{Caracterizaci\'on de Twitter}
+\paragraph{Extracci\'on de datos, dise\~no de pruebas (Implementaciones, balance de carga, etc)}
+
+\section{Caracterizaci\'on de mensajes en Twitter}
+\paragraph{Los mensajes compartidos en Twitter poseen varias caracter\'isticas \'unicas, que los diferencian de los dem\'as corpus de datos citados previamente. (Go y otros, 2009) identifican cuatro de ellas:}
+
+\begin{itemize}
+\item Longitud m\'axima: Cada publicaci\'on puede estar compuesta por una cantidad m\'axima de 140 caracteres, incluyendo signos de puntuaci\'on y s\'imbolos.
+\item Alta disponibilidad: La API de Twitter permite obtener tuits libremente, a trav\'es de su funci\'on de b\'usqueda. Mediante esta funci\'on es posible recolectar una cantidad de tuits considerable para conformar los conjuntos de entrenamiento y de evaluaci\'on.
+\item Modelo del lenguaje: Los mensajes de Twitter pueden generados desde diversos dispositivos, incluyendo los tel\'efonos celulares. Esto conlleva a que los errores ortogr\'aficos y expresiones informales se hagan mucho m\'as frecuentes en comparaci\'on a otros dominios.
+\item Dominio: Los tuits se refieren a diversos temas, lo cual es relevante puesto que un gran porcentaje de estudios pasados fueron centrados en un dominio espec\'ifico.
+\end{itemize}
+
+\paragraph{Existen adem\'as ciertas convenciones de lenguaje de los tuits:}
+\begin{itemize}
+\item ``RT'' es un acr\'onimo de retuit, que se coloca delante de un mensaje para indicar que el mismo est\'a siendo repetido o compartido.
+\item El caracter ``\#'' es utilizado para marcar, organizar y clasificar tuits por temas o categor\'ias.
+\item El caracter ``@'' es empleado para referirse a una cuenta por su nombre de usuario.
+\end{itemize}
+\paragraph{Es frecuente adem\'as que los tuits vayan acompa\~nados de emoticones y v\'inculos de Web.}

@@ -1,0 +1,274 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.1.11)  23 OCT 2013 00:05
+entering extended mode
+**trabajodegrado.tex
+(C:\Users\usuario\Desktop\Tesis\latex\trabajodegrado.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\spanish.ldf"
+Language: spanish.ldf 2009/01/02 v5.0h Spanish support from the babel system
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+)
+\es@datefmt=\count89
+\es@quottoks=\toks16
+\es@quotdepth=\count90
+Package babel Info: Making " an active character on input line 492.
+Package babel Info: Making . an active character on input line 585.
+Package babel Info: Making < an active character on input line 630.
+Package babel Info: Making > an active character on input line 630.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count91
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(C:\Users\usuario\Desktop\Tesis\latex\trabajodegrado.aux
+(C:\Users\usuario\Desktop\Tesis\latex\acronimos.aux)
+(C:\Users\usuario\Desktop\Tesis\latex\simbolos.aux)
+(C:\Users\usuario\Desktop\Tesis\latex\introduccion.aux)
+(C:\Users\usuario\Desktop\Tesis\latex\mineria.aux)
+(C:\Users\usuario\Desktop\Tesis\latex\formulacion.aux)
+(C:\Users\usuario\Desktop\Tesis\latex\resultados.aux)
+(C:\Users\usuario\Desktop\Tesis\latex\conclusiones.aux)
+(C:\Users\usuario\Desktop\Tesis\latex\bibliografia.aux)
+(C:\Users\usuario\Desktop\Tesis\latex\anexos.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+
+(C:\Users\usuario\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count92
+\scratchdimen=\dimen106
+\scratchbox=\box26
+\nofMPsegments=\count93
+\nofMParguments=\count94
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count95
+\MPscratchDim=\dimen107
+\MPnumerator=\count96
+\makeMPintoPDFobject=\count97
+\everyMPtoPDFconversion=\toks19
+) (C:\Users\usuario\Desktop\Tesis\latex\trabajodegrado.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 18.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 18.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 18.
+ [1
+
+
+{C:/Users/usuario/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
+\tf@toc=\write3
+ [1]
+(C:\Users\usuario\Desktop\Tesis\latex\trabajodegrado.lof)
+\tf@lof=\write4
+ [2
+
+]
+(C:\Users\usuario\Desktop\Tesis\latex\trabajodegrado.lot)
+\tf@lot=\write5
+ [3
+
+]
+(C:\Users\usuario\Desktop\Tesis\latex\acronimos.tex) [4
+
+
+]
+(C:\Users\usuario\Desktop\Tesis\latex\simbolos.tex) [5
+
+
+
+]
+(C:\Users\usuario\Desktop\Tesis\latex\introduccion.tex
+Cap\'{\i }tulo 1.
+[1
+
+
+
+]) [2] [3
+
+] (C:\Users\usuario\Desktop\Tesis\latex\mineria.tex
+Cap\'{\i }tulo 2.
+[4
+
+
+] <etapaskdd.png, id=37, 453.94594pt x 247.67531pt>
+File: etapaskdd.png Graphic file (type png)
+ <use etapaskdd.png>
+Package pdftex.def Info: etapaskdd.png used on input line 13.
+(pdftex.def)             Requested size: 390.0pt x 212.78874pt.
+
+[5 <C:/Users/usuario/Desktop/Tesis/latex/etapaskdd.png>] [6]
+Overfull \hbox (1.55035pt too wide) in paragraph at lines 40--41
+[]\OT1/cmr/bx/n/12 Stemming: \OT1/cmr/m/n/12 El meto-do de \OT1/cmr/m/it/12 st
+em-ming \OT1/cmr/m/n/12 con-sis-te en ob-te-ner la raz semanti-
+ []
+
+[7] [8] [9] [10] [11]
+Overfull \hbox (1.61617pt too wide) in paragraph at lines 84--85
+[]\OT1/cmr/bx/n/12 Multi-ples orien-ta-cio-nes semanti-cas: \OT1/cmr/m/n/12 S
+e pre-sen-tan cuan-do se efectua
+ []
+
+
+Overfull \hbox (36.58182pt too wide) in paragraph at lines 91--91
+[]\OT1/cmr/bx/n/17.28 Estrategias ba-sa-das en apren-di-za-je de maqui-
+ []
+
+[12] [13] [14] [15] [16] [17] [18] [19] [20] [21]) [22]
+(C:\Users\usuario\Desktop\Tesis\latex\formulacion.tex
+Cap\'{\i }tulo 3.
+[23
+
+
+
+]) [24] (C:\Users\usuario\Desktop\Tesis\latex\resultados.tex
+Cap\'{\i }tulo 4.
+) [25
+
+
+
+] (C:\Users\usuario\Desktop\Tesis\latex\conclusiones.tex
+Cap\'{\i }tulo 5.
+) [26
+
+
+
+] (C:\Users\usuario\Desktop\Tesis\latex\bibliografia.tex
+Cap\'{\i }tulo 6.
+[27
+
+
+
+] [28]
+Overfull \hbox (8.72226pt too wide) in paragraph at lines 18--19
+[]\OT1/cmr/m/n/12 Moreno-Ortiz, An-to-nio; Perez-Hernandez, Chan-tal. Uni-ver
+-si-dad de Mala-
+ []
+
+[29]) [30] (C:\Users\usuario\Desktop\Tesis\latex\anexos.tex
+Ap\'{e}ndice A.
+) [31
+
+
+
+] (C:\Users\usuario\Desktop\Tesis\latex\trabajodegrado.aux
+(C:\Users\usuario\Desktop\Tesis\latex\acronimos.aux)
+(C:\Users\usuario\Desktop\Tesis\latex\simbolos.aux)
+(C:\Users\usuario\Desktop\Tesis\latex\introduccion.aux)
+(C:\Users\usuario\Desktop\Tesis\latex\mineria.aux)
+(C:\Users\usuario\Desktop\Tesis\latex\formulacion.aux)
+(C:\Users\usuario\Desktop\Tesis\latex\resultados.aux)
+(C:\Users\usuario\Desktop\Tesis\latex\conclusiones.aux)
+(C:\Users\usuario\Desktop\Tesis\latex\bibliografia.aux)
+(C:\Users\usuario\Desktop\Tesis\latex\anexos.aux)) ) 
+Here is how much of TeX's memory you used:
+ 1910 strings out of 494045
+ 26933 string characters out of 3148435
+ 87288 words of memory out of 3000000
+ 5150 multiletter control sequences out of 15000+200000
+ 9827 words of font info for 34 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 27i,9n,27p,1792b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on trabajodegrado.pdf (37 pages, 271933 bytes).
+PDF statistics:
+ 168 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+
