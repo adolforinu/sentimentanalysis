@@ -1,7 +1,413 @@
 \chapter{Despliegue y an\'alisis de resultados}\label{resultados}
 
-\paragraph{En este cap\'itulo van:}
-\paragraph{Herramientas utilizadas}
-\paragraph{Selecci\'on de atributos, de las tareas, etc}
-\paragraph{Descripci\'on paso a paso de las variantes utilizadas, tunning de algoritmos}
-\paragraph{Desplegar gr\'aficos de resultados}
+En este cap\'itulo se describen los resultados obtenidos mediante la ejecuci\'on de los algoritmos abordados, con los par\'ametros de entrada antes descriptos. Para el problema tratado, el rendimiento de los algoritmos es relevante en funci\'on a la precisi\'on y exhaustividad obtenidas, siendo secundarias otras mediciones tales como los costos de tiempo y espacio.
+\newline
+
+Las comparativas son efectuadas primeramente entre distintas ejecuciones para un mismo algoritmo, de modo a medir la efectividad en las asignaciones de los par\'ametros y la influencia de las distribuciones de los conjuntos de entrenamiento (cargas balanceadas y desbalanceadas). Finalmente, es establecida adem\'as una comparativa entre las diferentes implementaciones para valorar la respectiva eficacia de cada uno para la clasificaci\'on de textos.
+
+\section{Conteo Simple basado en l\'exico}
+
+Este algoritmo, que sigue la estrategia basada en l\'exicos, efectuando la estimaci\'on de clases sobre el conjunto de evaluaci\'on arroja la matriz de confusi\'on desplegada en el Cuadro \ref{res:conteo_matconf}, a partir de la cual se calculan luego en porcentajes las m\'etricas descriptas en el Cuadro \ref{res:conteosimple}. En la matriz de confusi\'on, las filas representan las cantidades reales de instancias por cada clase, mientras que las columnas representan las cantidades respectivas estimadas por el clasificador para cada una de ellas.
+\newline
+
+\begin{table}[htb] 
+\centering
+
+$
+\begin{array}{|c|c|c|c|}
+      \hline
+       & \mathbf{Positivos} & \mathbf{Negativos} & \mathbf{Neutros}	\\
+      \hline
+      \mathrm{\mathbf{Positivos}} & 66 & 9 & 53 \\
+      \hline
+      \mathrm{\mathbf{Negativos}} & 31 & 531 & 172 \\
+      \hline
+      \mathrm{\mathbf{Neutros}}	  & 43 & 47 & 550 \\
+      \hline
+\end{array}
+$
+\caption{Matriz de confusi\'on para el algoritmo de Conteo Simple basado en l\'exico sobre el conjunto de entrenamiento.}
+\label{res:conteo_matconf}
+\end{table}
+
+\begin{table}[htb] 
+\centering
+
+$
+\begin{array}{|c|c|c|c|}
+      \hline
+      \mathbf{Polaridad} & \mathbf{Precisi\acute{o}n(\%)} & \mathbf{Exhaustividad(\%)} & \mathbf{Medida-F(\%)}	\\
+      \hline
+      \mathrm{Positiva}  & 47.1	& 51.6 & 49.3	\\
+      \hline
+      \mathrm{Negativa}  & 90.5 & 72.3 & 80.4	\\
+      \hline
+      \mathrm{Neutral}	 & 71.0 & 85.9 & 77,7	\\
+      \hline
+\end{array}
+$
+\caption{Evaluaci\'on de ejecuci\'on del algoritmo de Conteo Simple basado en l\'exico sobre el conjunto de evaluaci\'on.}
+\label{res:conteosimple}
+\end{table}
+
+Observando dichos resultados, si comparamos la Medida-F entre las tres clases, se puede apreciar que para los tuits negativos y neutrales se obtuvieron porcentajes aceptables, mientras para los positivos resulta muy pobre. Esto se debi\'o a la diferencia en la cantidad de instancias positivas de la muestra en relaci\'on a las negativas y neutrales. Podemos resaltar adem\'as la influencia del tama\~no de las listas del l\'exico, donde la cantidad final de palabras negativas es pr\'acticamente cuatro veces mayor que la cantidad final de palabras positivas. Sumarizando los resultados, entre todas las clases, la medida-F para la implementaci\'on es de 76.36\%.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Bayes Ingenuo}
+
+Para el algoritmo de Bayes Ingenuo, contamos con dos implementaciones. La primera de ellas es la aplicaci\'on simple desarrollada, mientras que la otra es la utilizada en Weka. Ejecutamos dichos algoritmos entren\'andolos primero con la distribuci\'on de carga balanceada y luego con la carga desbalanceada.
+\newline
+
+\subsection{Evaluaci\'on simple}
+
+Presentamos primeramente los resultados obtenidos con la implementaci\'on simple del algoritmo. En primer lugar, entrenamos el clasificador con cargas balanceadas, es decir igual probabilidad para las tres clases. La estimaci\'on resultante sobre el conjunto de entrenamiento se muestra en el Cuadro \ref{res:bayes_baltrain}, mientras que la resultante sobre el conjunto se despliega en el Cuadro \ref{res:bayes_baleval}. Observamos que la efectividad sobre el mismo conjunto de entrenamiento es bastante buena y que no se resigna mucha precisi\'on en beneficio de la exhaustividad ni viceversa. En cambio, sobre el conjunto de evaluaci\'on es muy notoria la resignaci\'on de precisi\'on en relaci\'on a la exhaustividad para las instancias positivas y neutrales, d\'andose el caso contrario para las instancias negativas. Esto est\'a influenciado tambi\'en por la diferencia en la cantidad de muestras negativas en el conjunto de evaluaci\'on, la cual es cinco veces mayor a la cantidad de muestras de las dem\'as clases.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[htb] 
+\centering
+
+$
+\begin{array}{|c|c|c|c|}
+      \hline
+      \mathbf{Polaridad} & \mathbf{Precisi\acute{o}n(\%)} & \mathbf{Exhaustividad(\%)} & \mathbf{Medida-F(\%)}	\\
+      \hline
+      \mathrm{Positiva}  & 98.4	& 96.9 & 97.6	\\
+      \hline
+      \mathrm{Negativa}  & 98.4 & 94.5 & 96.4	\\
+      \hline
+      \mathrm{Neutral}	 & 92.6 & 97.7 & 95.1	\\
+      \hline
+\end{array}
+$
+\caption{Evaluaci\'on de Bayes Ingenuo simple entrenado con carga balanceada sobre el conjunto de entrenamiento.}
+\label{res:bayes_baltrain}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[htb] 
+\centering
+
+$
+\begin{array}{|c|c|c|c|}
+      \hline
+      \mathbf{Polaridad} & \mathbf{Precisi\acute{o}n(\%)} & \mathbf{Exhaustividad(\%)} & \mathbf{Medida-F(\%)}	\\
+      \hline
+      \mathrm{Positiva}  & 60.0	& 80.5 & 68.8 \\
+      \hline
+      \mathrm{Negativa}  & 91.7 & 60.3 & 72.7 \\
+      \hline
+      \mathrm{Neutral}	 & 23.8 & 60.0 & 34.0 \\
+      \hline
+\end{array}
+$
+\caption{Evaluaci\'on de Bayes Ingenuo simple entrenado con carga balanceada sobre el conjunto de evaluaci\'on.}
+\label{res:bayes_baleval}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Luego, entrenamos el mismo clasificador con las cargas desbalanceadas, para las cuales las probabilidades de ocurrencia para las clases negativa y neutral son mucho mayores a las probabilidad de ocurrencias positivas. Los resultados de evaluaci\'on sobre el mismo conjunto de entrenamiento se despliegan en el Cuadro \ref{res:bayes_desbaltrain}, mientras que la estimaci\'on sobre el conjunto de evaluaci\'on arroja los resultados desplegados en el Cuadro \ref{res:bayes_desbaleval}. En el primer caso, observamos que el desempe\~no general sigue siendo bueno, resaltando la diferencia entre la precisi\'on y exhaustividad para las instancias positivas causada por el desbalanceo de la carga. Mientras que en la evaluaci\'on sobre instancias desconocidas, se nota que en relaci\'on al caso equivalente visto en el Cuadro \ref{res:bayes_baleval}, hay una mejora considerable en la efectividad de clasificaci\'on de las instancias negativas y neutrales, debida al aumento de la cantidad de muestras de las mismas en entrenamiento. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[htb] 
+\centering
+
+$
+\begin{array}{|c|c|c|c|}
+      \hline
+      \mathbf{Polaridad} & \mathbf{Precisi\acute{o}n(\%)} & \mathbf{Exhaustividad(\%)} & \mathbf{Medida-F(\%)}	\\
+      \hline
+      \mathrm{Positiva}  & 85.4	& 96.1 & 90.4	\\
+      \hline
+      \mathrm{Negativa}  & 95.9 & 92.6 & 94.2	\\
+      \hline
+      \mathrm{Neutral}	 & 92.0 & 93.3 & 92.6	\\
+      \hline
+\end{array}
+$
+\caption{Evaluaci\'on de Bayes Ingenuo simple entrenado con carga desbalanceada sobre el conjunto de entrenamiento.}
+\label{res:bayes_desbaltrain}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[htb] 
+\centering
+
+$
+\begin{array}{|c|c|c|c|}
+      \hline
+      \mathbf{Polaridad} & \mathbf{Precisi\acute{o}n(\%)} & \mathbf{Exhaustividad(\%)} & \mathbf{Medida-F(\%)}	\\
+      \hline
+      \mathrm{Positiva}  & 66.7	& 68.3 & 67.5 \\
+      \hline
+      \mathrm{Negativa}  & 94.0 & 78.1 & 85.3 \\
+      \hline
+      \mathrm{Neutral}	 & 39.5 & 75.0 & 51.7 \\
+      \hline
+\end{array}
+$
+\caption{Evaluaci\'on de Bayes Ingenuo simple entrenado con carga desbalanceada sobre el conjunto de evaluaci\'on.}
+\label{res:bayes_desbaleval}
+\end{table}
+
+Notamos sin embargo, que la efectividad de clasificaci\'on de las instancias positivas y neutrales sigue siendo muy baja.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Evaluaci\'on en Weka}
+
+Pasamos luego a la implementaci\'on del algoritmo de Bayes Ingenuo en Weka, donde el m\'etodo de comparaci\'on ser\'a el mismo, es decir efectuar el entrenamiento con cargas balanceadas y desbalanceadas, evalu\'andolos luego sobre ambos conjuntos de datos.
+\newline
+
+En los Cuadros \ref{res:bayesweka_baltrain} y \ref{res:bayesweka_baleval} se describen los resultados obtenidos por el clasificador entrenado con la carga balanceada. En este caso podemos observar que, en relaci\'on a la implementaci\'on simple del Bayes Ingenuo, la evaluaci\'on sobre el propio conjunto de entrenamiento decae mucho en cuanto a efectividad. Esta diferencia afecta las tres clases definidas en el clasificador. En tanto, comparando la estimaci\'on sobre el conjunto de evaluaci\'on, podemos ver mejoras significativas en la clasificaci\'on de instancias negativas y neutrales, aunque sin alcanzar a\'un una efectividad deseable. Es muy notoria adem\'as, la resignaci\'on de efectividad para las muestras negativas en funci\'on a la precisi\'on, d\'andose el caso contrario para las muestras positivas y neutrales.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\begin{table}[htb] 
+\centering
+
+$
+\begin{array}{|c|c|c|c|}
+      \hline
+      \mathbf{Polaridad} & \mathbf{Precisi\acute{o}n(\%)} & \mathbf{Exhaustividad(\%)} & \mathbf{Medida-F(\%)}	\\
+      \hline
+      \mathrm{Positiva}  & 87.7	& 78.1 & 82.6	\\
+      \hline
+      \mathrm{Negativa}  & 80.0 & 90.6 & 85.0	\\
+      \hline
+      \mathrm{Neutral}	 & 86.4 & 84.4 & 85.4	\\
+      \hline
+\end{array}
+$
+\caption{Evaluaci\'on de Bayes Ingenuo en Weka entrenado con carga balanceada sobre el conjunto de entrenamiento.}
+\label{res:bayesweka_baltrain}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[htb] 
+\centering
+
+$
+\begin{array}{|c|c|c|c|}
+      \hline
+      \mathbf{Polaridad} & \mathbf{Precisi\acute{o}n(\%)} & \mathbf{Exhaustividad(\%)} & \mathbf{Medida-F(\%)}	\\
+      \hline
+      \mathrm{Positiva}  & 55.6	& 73.2 & 63.2	\\
+      \hline
+      \mathrm{Negativa}  & 92.1 & 74.9 & 82.6	\\
+      \hline
+      \mathrm{Neutral}	 & 36.8 & 62.5 & 46.3	\\
+      \hline
+\end{array}
+$
+\caption{Evaluaci\'on de Bayes Ingenuo en Weka entrenado con carga balanceada sobre el conjunto de evaluaci\'on.}
+\label{res:bayesweka_baleval}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+En el caso del clasificador entrenado con carga desbalanceada, podemos notar tambi\'en la baja efectividad sobre el propio conjunto de entrenamiento, adem\'as que sobre el conjunto de evaluaci\'on. Las diferencias entre precisi\'on y exhaustividad tambi\'en siguen siendo muy significativas, por lo que pasaremos a observar los resultados ofrecidos por los clasificadores construidos en funci\'on a los dem\'as algoritmos, antes de establecer si este fen\'omeno se debe a las caracter\'isticas de los clasificadores o es propio de los atributos de entrada.
+\newline
+
+En general, el porcentaje de acierto del clasificador de Weka para el clasificador ``balanceado'' fue de 73.00\% mientras que para el ``desbalanceado'' fue de 71.67\%, lo cual es un indicativo que para el estimador de Bayes Ingenuo es m\'as relevante el balanceo de cargas que la cantidad de instancias de entrenamiento.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\begin{table}[htb] 
+\centering
+
+$
+\begin{array}{|c|c|c|c|}
+      \hline
+      \mathbf{Polaridad} & \mathbf{Precisi\acute{o}n(\%)} & \mathbf{Exhaustividad(\%)} & \mathbf{Medida-F(\%)}	\\
+      \hline
+      \mathrm{Positiva}  & 60.2	& 53.1 & 56.4	\\
+      \hline
+      \mathrm{Negativa}  & 82.0 & 78.7 & 80.3	\\
+      \hline
+      \mathrm{Neutral}	 & 74.1 & 79.2 & 76.6	\\
+      \hline
+\end{array}
+$
+\caption{Evaluaci\'on de Bayes Ingenuo en Weka entrenado con carga desbalanceada sobre el conjunto de entrenamiento.}
+\label{res:bayesweka_desbaltrain}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[htb] 
+\centering
+
+$
+\begin{array}{|c|c|c|c|}
+      \hline
+      \mathbf{Polaridad} & \mathbf{Precisi\acute{o}n(\%)} & \mathbf{Exhaustividad(\%)} & \mathbf{Medida-F(\%)}	\\
+      \hline
+      \mathrm{Positiva}  & 72.7	& 58.5 & 64.9	\\
+      \hline
+      \mathrm{Negativa}  & 91.6 & 74.4 & 82.1	\\
+      \hline
+      \mathrm{Neutral}	 & 31.5 & 70.0 & 43.4	\\
+      \hline
+\end{array}
+$
+\caption{Evaluaci\'on de Bayes Ingenuo en Weka entrenado con carga desbalanceada sobre el conjunto de evaluaci\'on.}
+\label{res:bayesweka_desbaleval}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Observamos luego, en las siguientes secciones, el desempe\~no de los clasificadores entrenados en base a los dem\'as algoritmos, para establecer luego una comparaci\'on final en relaci\'on a la metodolog\'ia de Bayes.
+
+
+\section{Entrop\'ia M\'axima}
+
+Para este algoritmo existen adem\'as dos implementaciones diferentes, ambas en Weka. Dado que influyen los par\'ametros de entrada adem\'as de la distribuci\'on de la carga de entrenamiento, presentamos tablas con los mejores resultados obtenidos para determinadas combinaciones.
+
+\subsection{Logistic}
+
+En el Cuadro \ref{res:logistic} se muestran los resultados obtenidos con el clasificador entrenado con ambos tipos de carga, evaluando instancias no vistas en el entrenamiento (conjunto de evaluaci\'on). La diferencia m\'as relevante en la tabla es que se obtienen mejores resultados con el clasificador entrenado con la carga desbalanceada que con la balanceada, debido a que la diferencia en la cantidad de muestras a favor de la primera es muy significativa. En cuanto a los par\'ametros de entrada se puede observar que el porcentaje de acierto va creciendo levemente con el valor de $ridge$ hasta llegar a un m\'aximo y decrecer nuevamente. De esto inferimos que puede existir un valor m\'aximo apropiado de este par\'ametro para este conjunto de datos de entrada.
+
+\begin{table}[htb] 
+\centering
+
+$
+\begin{array}{|c|c|c|}
+      \hline
+      \mathbf{Distribuci\acute{o}n} & \mathbf{Ridge} & \mathbf{Acierto(\%)} \\
+      \hline
+      \mathrm{Balanceada}	&	0.01	& 72.33	\\
+      \hline
+      \mathrm{Balanceada}	&	0.1		& 73.00	\\
+      \hline
+      \mathrm{Balanceada}	&	1		& 74.33	\\
+      \hline
+      \mathrm{Balanceada}	&	10		& 73.33	\\
+      \hline
+      \mathrm{Balanceada}	&	100		& 74.00	\\
+      \hline
+      \mathrm{Desbalanceada}	&	0.01	& 81.33	\\
+      \hline
+      \mathrm{Desbalanceada}	&	0.1		& 82.00	\\
+      \hline
+      \mathrm{Desbalanceada}	&	1		& 82.33	\\
+      \hline
+      \mathrm{Desbalanceada}	&	10		& 83.00	\\
+      \hline
+      \mathrm{Desbalanceada}	&	100		& 79.67	\\
+      \hline
+\end{array}
+$
+\caption{Resultados de ejecuci\'on de \textit{Logistic} (Entrop\'ia M\'axima) en Weka.}
+\label{res:logistic}
+\end{table}
+
+Resaltamos entonces, que para la implementaci\'on del algoritmo de Entrop\'ia M\'axima, es m\'as efectivo para el entrenamiento una cantidad significativa de muestras etiquetadas que el balance de carga de las mismas.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{SimpleLogistic}
+
+En el caso de esta implementaci\'on podemos observar que los resultados obtenidos, desplegados en el Cuadro \ref{res:simplelogistic}, fueron similares a los vistos en la secci\'on anterior. La evaluaci\'on tambi\'en fue realizada sobre instancias desconocidas tras haber entrenado el clasificador con ambas distribuciones de cargas. 
+\newline
+
+Obtuvimos nuevamente mejores resultados con el entrenamiento sobre carga desbalanceada. Es adem\'as importante observar que si no le asignamos al algoritmo un l\'imite muy peque\~no de iteraciones (los valores mayores del intervalo para $heuristic\_stop$), podemos obtener resultados levemente mejores. En cuanto al uso de la validaci\'on cruzada, se puede apreciar en la tabla que no ofreci\'o ninguna mejora significativa, en relaci\'on a las ejecuciones en las que no fue empleado dicho mecanismo de entrenamiento.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[htb] 
+\centering
+
+$
+\begin{array}{|c|c|c|c|c|}
+      \hline
+      \mathbf{Distribuci\acute{o}n} & \mathbf{Utiliza VC} & \mathbf{heuristic\_stop} & \mathbf{max\_boost} & \mathbf{Acierto(\%)} \\
+      \hline
+      \mathrm{Balanceada}	&	No	&	100	&	1173	&	72.33	\\
+      \hline
+      \mathrm{Balanceada}	&	No	&  1000	&	1173	&	72.33	\\
+      \hline
+      \mathrm{Balanceada}	&	Si	&	100	&	1173	&	70.67	\\
+      \hline
+      \mathrm{Balanceada}	&	Si	&  1000	&	1173	&	70.67	\\
+      \hline
+      \mathrm{Desbalanceada}	&	Si	&  1000	&	1135	&	81.33	\\
+      \hline
+      \mathrm{Desbalanceada}	&	No	&	100	&	1135	&	81.33	\\
+      \hline
+      \mathrm{Desbalanceada}	&	No	&  1000	&	1135	&	80.67	\\
+      \hline
+      \mathrm{Desbalanceada}	&	No	&	 10	&	1135	&	80.00	\\
+      \hline
+\end{array}
+$
+\caption{Resultados de ejecuci\'on de \textit{SimpleLogistic} (Entrop\'ia M\'axima) en Weka.}
+\label{res:simplelogistic}
+\end{table}
+
+De manera similar a \textit{Logistic}, la otra implementaci\'on para el mismo algoritmo, observamos la influencia de la cantidad de instancias de entrenamiento por sobre la distribuci\'on equitativa de las mismas entre categor\'ias.
+\newline
+
+Pasamos luego, a la evaluaci\'on del siguiente algoritmo antes de establecer unas comparaciones finales entre todos los m\'etodos descriptos.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{M\'aquinas de Soporte Vectorial}
+
+Como fue descripto en el cap\'itulo anterior, la implementaci\'on de este algoritmo es la que requiere la mayor cantidad de par\'ametros de entrada, por lo que el resumen presentado, desplegado en el Cuadro \ref{res:libsvm}, muestra los mejores resultados obtenidos entre las distribuciones de carga utilizadas as\'i como para cada una de las funciones de \textit{kernel} disponibles. Para varias combinaciones diferentes, existen ciertos intervalos de valores que ofrecen el mismo porcentaje de acierto.
+\newline
+
+Separando primeramente los resultados entre las distribuciones de carga, podemos observar en la tabla que el porcentaje de acierto es mayor con la carga desbalanceada de entrenamiento, es decir, nuevamente es m\'as influyente la cantidad de muestras para contribuir a la efectividad del clasificador. En tanto, comparando las funciones de \textit{kernel}, notamos que en general la funci\'on polinomial es la que contribuye mejor a los resultados, con una efectividad levemente mayor a la obtenida con la funci\'on radial y luego sobre la funci\'on lineal. Esta diferencia tambi\'en es mejor remarcada entre los clasificadores entrenados con cargas desbalanceadas.
+
+\begin{table}[htb] 
+\centering
+
+$
+\begin{array}{|c|c|c|c|c|c|c|}
+      \hline
+      \mathbf{Distribuci\acute{o}n} & \mathbf{Kernel} & \mathbf{coef0} & \mathbf{cost} & \mathbf{degree} & \mathbf{gamma} & \mathbf{\%} \\
+      \hline
+      \mathrm{Balanceada} & Lin & 2^0,\ldots,2^{13} & 2 & 1,\ldots,6 & {1 \over n},\ldots,1 & 70.00	\\
+      \hline
+      \mathrm{Balanceada} & Pol & 1 &	16 & 3 & 0.0009 & 73.00	\\
+      \hline
+      \mathrm{Balanceada} & Pol &	2 &	3 & 3 & 0.0009 & 73.00 \\
+      \hline
+      \mathrm{Balanceada} & Pol & 1 & 8 & 3 & 0.0085 & 72.67	\\
+      \hline
+      \mathrm{Balanceada} & Pol & 4096 & 256 & 1 & 0.0009 & 72.67	\\
+      \hline
+      \mathrm{Balanceada} & Rad & 2^0,\ldots,2^{13} & 2^0,\ldots,2^{13} & 1,\ldots,6 & 0.8525 & 71.33	\\
+      \hline
+      \mathrm{Desbalanceada}	& Lin & 1 &	1,2,4 &	1,\ldots,6 & {1 \over n},\ldots,1 & 78.33 \\
+      \hline
+      \mathrm{Desbalanceada}	& Pol &	4096 & 4096	& 3 & 0.0088 & 83.67 \\
+      \hline
+      \mathrm{Desbalanceada}	& Pol & 1024 & 256 & 4 & 0.0009 & 83.00	\\
+      \hline
+      \mathrm{Desbalanceada}	& Pol &	1024 & 256 & 4 & 0.8811 & 83.00	\\
+      \hline
+      \mathrm{Desbalanceada}	& Rad & 2^0,\ldots,2^{13} &	512	& 1,\ldots,6 & {1 \over n},\ldots,1 & 81.67	\\
+      \hline
+      \mathrm{Desbalanceada}	& Rad & 2^0,\ldots,2^{13} &	8 &	1,\ldots,6 & {1 \over n},\ldots,1 & 81.00 \\
+      \hline
+\end{array}
+$
+\caption{Resultados de ejecuci\'on de \textit{LibSVM} (M\'aquinas de Soporte Vectorial) en Weka.}
+\label{res:libsvm}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Respecto a los par\'ametros con valores num\'ericos, como $coef0$, $cost$, $degree$ y $gamma$, podemos observar que no existe un criterio claro para determinar asignaciones adecuadas para ellos. Vemos que existen ciertos intervalos de valores que ofrecen la misma efectividad si mantenemos fijo uno de los par\'ametros; por ejemplo, en la primera l\'inea de valores para la funci\'on lineal sobre la carga balanceada, mientras se mantiene el valor 2 para $cost$, los dem\'as par\'ametros no influyen a favor ni en contra del porcentaje de acierto general del clasificador. En cambio, si observamos los valores para la misma funci\'on, con carga desbalanceada, vemos que manteniendo fijo el valor de $coef0$ ocurre un fen\'omeno similar. Adem\'as, si comparamos los resultados del clasificador entrenado con la carga desbalanceada y la funci\'on polinomial, notamos que los valores para la mejor combinaci\'on de par\'ametros y la segunda mejor combinaci\'on, no son cercanos entre s\'i. De estas observaciones, podemos concluir que la asignaci\'on de valores es dependiente principalmente del conjunto de datos de entrada y de la funci\'on utilizada, por lo que la iteraci\'on sobre intervalos de valores resulta una operaci\'on apropiada para este evaluador.
+\newline
+
+Habiendo esbozado las tablas de resultados y las observaciones obtenidas a partir de ellos, para cada uno de los algoritmos utilizados, pasamos luego a establecer las comparaciones generales entre s\'i.
+
+\section{Comparaciones generales entre m\'etodos}
+
+En esta secci\'on presentamos una tabla y/o gr\'afica que cruza los resultados entre las distintas implementaciones.

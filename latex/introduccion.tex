@@ -1,15 +1,45 @@
 \chapter {Cap\'itulo Introductorio}\label{Introduccion}
 
-\paragraph{En este cap\'itulo van:}
+Las herramientas mediadoras de redes sociales permiten a sus usuarios compartir publicaciones entre s\'i. Los autores de dichos mensajes escriben sobre sus vidas, comparten opiniones sobre diferentes t\'opicos y discuten problemas actuales. A medida que m\'as y m\'as usuarios publican mensajes acerca de los productos y servicios que utilizan, estos sitios de mediaci\'on se convierten en una fuente valiosa de descripci\'on de las opiniones y sentimientos de las personas. Tales datos pueden ser eficientemente utilizados para estudios sociales (Pak y Paroubek, 2010). Estos datos pueden ser convertidos en informaci\'on que permita estimar la sensaci\'on general acerca de un determinado t\'opico o entidad.
+\newline
 
-\paragraph{Introducci\'on}
-\paragraph{Problema, motivaci\'on}
-\paragraph{Objetivos generales y espec\'ificos}
+El an\'alisis de sentimientos fue objeto de estudio a diferentes niveles de granularidad. Inicialmente se ocuparon del an\'alisis de cr\'iticas acerca de productos espec\'ificos, con el objetivo de clasificarlos como ``recomendables'' o ``no recomendables'', a partir de asociaciones sem\'anticas de las oraciones (Turney, 2002; Pang y Lee, 2004). Otros estudios clasificaron los sentimientos al nivel de oraciones, defini\'endolas como ``positivas'' o ``negativas'' (Hu y Liu, 2004; Kim y Hovy, 2004). M\'as recientemente, atra\'idos por la variedad y diversidad de los datos generados, fueron objeto de an\'alisis los mensajes compartidos en mediadores de redes sociales, los cuales tienen una longitud limitada y son generados en tiempo real. Algunos trabajos que abordaron estas fuentes son los de Pak y Paroubek (2010), que clasificaron los mensajes de Twitter como ``positivos'', ``negativos'' o ``neutrales''; Go y otros (2009), que utilizaron los tuits con emoticones para clasificarlos como ``positivos'' o ``negativos''; y Saralegi Urizar y San Vicente Roncal (2012), que clasificaron las publicaciones de Twitter en espa\~nol como ``muy positivas'', ``positivas'', ``neutrales'', ``negativas'', ``muy negativas'' o ``ninguna de las anteriores''.
+\newline
 
-\paragraph{Escritos que podr\'ian ser reutilizados:}
+En Paraguay, una de las \'areas de comercio de mayor penetraci\'on en la poblaci\'on general es la de las telecomunicaciones, m\'as espec\'ificamente mediante el servicio de telefon\'ia m\'ovil. El inter\'es por conocer la opini\'on de las personas acerca del desempe\~no y la calidad del servicio que brindan las compa\~n\'ias prestadoras de dicho servicio, se ha acrecentado desde la introducci\'on de la ley de portabilidad num\'erica en el pa\'is en el a\~no 2012. 
+\newline
 
-\paragraph{\textit{Las herramientas mediadoras de redes sociales permiten a sus usuarios compartir publicaciones entre s\'i. Los autores de dichos mensajes escriben sobre sus vidas, comparten opiniones sobre diferentes t\'opicos y discuten problemas actuales. A medida que m\'as y m\'as usuarios publican mensajes acerca de los productos y servicios que utilizan, estos sitios de mediaci\'on se convierten en una fuente valiosa de descripci\'on de las opiniones y sentimientos de las personas. Tales datos pueden ser eficientemente utilizados para estudios sociales (Pak y Paroubek, 2010). Estos datos pueden ser convertidos en informaci\'on que permita estimar la sensaci\'on general acerca de un determinado t\'opico o entidad.}}
+Teniendo en cuenta adem\'as el biling\"uismo del pa\'is, donde los idiomas oficiales son el espa\~nol y el guaran\'i, sumado al hecho de que los mensajes compartidos en los sitios de uso masivo est\'an generalmente escritos en lenguaje natural, lo cual implica el empleo frecuente del fen\'omeno ling\"u\'istico conocido como \textit{jopara}. Consideramos de inter\'es el an\'alisis de la informaci\'on contenida en dichos sitios, expresada en lenguaje natural formal e informal y acentuada por la caracter\'istica inherente de las palabras del guaran\'i y el \textit{jopara}, que son utilizadas para enfatizar o motivar sentimientos.
+\newline
 
-\paragraph{\textit{El an\'alisis de sentimientos fue objeto de estudio a diferentes niveles de granularidad. Inicialmente se ocuparon del an\'alisis de cr\'iticas acerca de productos espec\'ificos, con el objetivo de clasificarlos como ``recomendables'' o ``no recomendables'', a partir de asociaciones sem\'anticas de las oraciones (Turney, 2002; Pang y Lee, 2004). Otros estudios clasificaron los sentimientos al nivel de oraciones, defini\'endolas como ``positivas'' o ``negativas'' (Hu y Liu, 2004; Kim y Hovy, 2004). M\'as recientemente, atra\'idos por la variedad y diversidad de los datos generados, fueron objeto de an\'alisis los mensajes compartidos en mediadores de redes sociales, los cuales tienen una longitud limitada y son generados en tiempo real. Algunos trabajos que abordaron estas fuentes son los de Pak y Paroubek (2010), que clasificaron los mensajes de Twitter como ``positivos'', ``negativos'' o ``neutrales''; Go y otros (2009), que utilizaron los tuits con emoticones para clasificarlos como ``positivos'' o ``negativos''; y Saralegi Urizar y San Vicente Roncal (2012), que clasificaron las publicaciones de Twitter en espa\~nol como ``muy positivas'', ``positivas'', ``neutrales'', ``negativas'', ``muy negativas'' o ``ninguna de las anteriores''.}}
+Presentado el escenario del problema a tratar, pasamos a describir la justificaci\'on y los objetivos trazados en la propuesta de soluci\'on.
 
-\paragraph{Para clasificar como positivos o negativos los sentimientos expresados en un documento o mensaje, existen dos principales enfoques com\'unmente utilizados: la estrategia basada en l\'exicos, y la estrategia de aprendizaje de m\'aquina (Zhang y otros, 2011), los cuales son abordados en las siguientes secciones. }
+\section{Justificaci\'on}
+
+En este trabajo pretendemos explorar la existencia de algunos l\'imites en la aplicaci\'on de ciertas t\'ecnicas de miner\'ia de datos orientadas al tratamiento de textos y describir las eventuales dificultades encontradas en el proceso de clasificaci\'on de sentimientos.
+\newline
+
+Tambi\'en forma de la propuesta, la construcci\'on y posterior evaluaci\'on de la efectividad de un diccionario de palabras, con el fin de utilizarlo como otro mecanismo de clasificaci\'on, y que est\'a basado en las palabras utilizadas en el lenguaje antes descripto.
+\newline
+
+El sitio mediador de redes sociales Twitter es un medio de comunicaci\'on muy frecuente y preferido por los usuarios; constituy\'endose en un par\'ametro real y v\'alido para ser objeto del estudio propuesto. La val\'ia de esta fuente es demostrada a trav\'es del an\'alisis de las estad\'isticas obtenidas tras las primeras operaciones de extracci\'on de datos, en las que observamos que una compa\~n\'ia de telefon\'ia m\'ovil recibe un promedio de 300 menciones diariamente en dicha red.
+
+
+\section{Objetivos}
+
+El objetivo general de esta propuesta es extraer de manera automatizada las tendencias de las  opiniones de los usuarios acerca de un servicio brindado en particular, utilizando una fuente de datos como mediadora, a trav\'es de t\'ecnicas de miner\'ia y an\'alisis computacional de sentimientos en lenguaje natural.
+\newline
+
+Los objetivos espec\'ificos de este trabajo son:
+\newline
+\begin{itemize}
+\item Obtener los datos necesarios para iniciar el an\'alisis del escenario presentado en esta propuesta.
+\item Analizar las tareas y los algoritmos de miner\'ia existentes; modelarlos de manera que sean aplicables al problema presentado.
+\item Conceptualizar un diccionario de palabras del lenguaje hablado en Paraguay, clasificadas por su orientaci\'on de polaridad como positivas o negativas, que pueda ser utilizado como referencia para futuros trabajos de an\'alisis de sentimientos.
+\item Discutir las ventajas y desventajas de la utilizaci\'on del diccionario, adem\'as de las consideraciones pertinentes para su construcci\'on.
+\item Establecer una serie de reglas de preprocesamiento de datos con criterio unificado, que sea aplicable de manera gen\'erica a todas las t\'ecnicas de clasificaci\'on presentadas. 
+\item Desarrollar una t\'ecnica que sea implementada a trav\'es de una herramienta que analice autom\'aticamente los posibles sentimientos de un usuario, expresados en el lenguaje h\'ibrido paraguayo que conjunta t\'erminos de los idiomas espa\~nol y guaran\'i.
+\item Proponer una estructura de evaluaci\'on del enfoque utilizado en este trabajo, en funci\'on a los diferentes tipos de entradas que sean requeridas por cada algoritmo.
+\end{itemize}
+
+Los siguiente cap\'itulos de este documentos est\'an estructurados de la siguiente manera: el cap\'itulo 2 presenta una introducci\'on conceptual al an\'alisis computacional de sentimientos, los procedimientos y etapas a seguir para abordar dicho problema as\'i como las estrategias m\'as utilizadas para el efecto. En el cap\'itulo 3 se describe el modelado del problema y la aplicaci\'on de las estrategias presentadas sobre el mismo, estableciendo adem\'as el alcance del trabajo. El cap\'itulo 4 consiste en el despliegue de los resultados obtenidos y su correspondiente an\'alisis en funci\'on a las m\'etricas de evaluaci\'on establecidas. Finalmente, en el cap\'itulo 5, presentamos las conclusiones en relaci\'on a los objetivos aqu\'i trazados y las propuestas de trabajos futuros que pueden dar continuidad al estudio en el \'area de miner\'ia de opiniones.

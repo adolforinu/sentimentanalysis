@@ -1,8 +1,30 @@
 \select@language {spanish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Matriz de confusi\'on o de clasificaci\'on}}{18}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Matriz de confusi\'on o de clasificaci\'on}}{27}
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Etiquetado de tuits por polaridad}}{37}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Normalizaci\'on de palabras extendidas}}{37}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Caracteres eliminados en el preprocesamiento}}{38}
+\contentsline {table}{\numberline {3.4}{\ignorespaces Categorizaci\'on ling\"u\'istica del corpus de texto}}{40}
+\contentsline {table}{\numberline {3.5}{\ignorespaces Categorizaci\'on l\'exica del corpus de texto}}{41}
+\contentsline {table}{\numberline {3.6}{\ignorespaces Intervalos definidos para los par\'ametros de entrada de \textit {Logistic}.}}{48}
+\contentsline {table}{\numberline {3.7}{\ignorespaces Intervalos definidos para los par\'ametros de entrada de \textit {SimpleLogistic}.}}{48}
+\contentsline {table}{\numberline {3.8}{\ignorespaces Intervalos definidos para los par\'ametros de entrada de \textit {LibSVM}.}}{48}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Matriz de confusi\'on para el algoritmo de Conteo Simple basado en l\'exico sobre el conjunto de entrenamiento.}}{51}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Evaluaci\'on de ejecuci\'on del algoritmo de Conteo Simple basado en l\'exico sobre el conjunto de evaluaci\'on.}}{51}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Evaluaci\'on de Bayes Ingenuo simple entrenado con carga balanceada sobre el conjunto de entrenamiento.}}{52}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Evaluaci\'on de Bayes Ingenuo simple entrenado con carga balanceada sobre el conjunto de evaluaci\'on.}}{52}
+\contentsline {table}{\numberline {4.5}{\ignorespaces Evaluaci\'on de Bayes Ingenuo simple entrenado con carga desbalanceada sobre el conjunto de entrenamiento.}}{53}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Evaluaci\'on de Bayes Ingenuo simple entrenado con carga desbalanceada sobre el conjunto de evaluaci\'on.}}{53}
+\contentsline {table}{\numberline {4.7}{\ignorespaces Evaluaci\'on de Bayes Ingenuo en Weka entrenado con carga balanceada sobre el conjunto de entrenamiento.}}{54}
+\contentsline {table}{\numberline {4.8}{\ignorespaces Evaluaci\'on de Bayes Ingenuo en Weka entrenado con carga balanceada sobre el conjunto de evaluaci\'on.}}{54}
+\contentsline {table}{\numberline {4.9}{\ignorespaces Evaluaci\'on de Bayes Ingenuo en Weka entrenado con carga desbalanceada sobre el conjunto de entrenamiento.}}{55}
+\contentsline {table}{\numberline {4.10}{\ignorespaces Evaluaci\'on de Bayes Ingenuo en Weka entrenado con carga desbalanceada sobre el conjunto de evaluaci\'on.}}{55}
+\contentsline {table}{\numberline {4.11}{\ignorespaces Resultados de ejecuci\'on de \textit {Logistic} (Entrop\'ia M\'axima) en Weka.}}{56}
+\contentsline {table}{\numberline {4.12}{\ignorespaces Resultados de ejecuci\'on de \textit {SimpleLogistic} (Entrop\'ia M\'axima) en Weka.}}{57}
+\contentsline {table}{\numberline {4.13}{\ignorespaces Resultados de ejecuci\'on de \textit {LibSVM} (M\'aquinas de Soporte Vectorial) en Weka.}}{58}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -1,7 +1,17 @@
 \select@language {spanish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Etapas en el proceso de KDD}}{5}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Etapas en el proceso de KDD (Fayyad y otros, 1996)}}{7}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Conjuntos de entrenamiento y de evaluaci\'on en estrategias de aprendizaje de m\'aquina.}}{15}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Clasificaci\'on de una nueva instancia mediante el algoritmo de Bayes Ingenuo.}}{18}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Separaci\'on de clases a trav\'es del algoritmo de Entrop\'ia M\'axima.}}{19}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Separaci\'on de clases mediante un hiperplano en SVM.}}{21}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Mapeo de vectores en dimensiones superiores mediante una funci\'on kernel en SVM.}}{21}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Envoltura convexa de un conjunto de puntos.}}{22}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Combinaci\'on de puntos de una envoltura convexa.}}{22}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Vectores de soporte en una envoltura convexa.}}{23}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Vista general del proceso seguido para obtener los resultados.}}{35}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -2,27 +2,41 @@
 \usepackage[latin1]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\input{spanishAlgorithmic} %instrucciones de pseudocodigo en español
 \newcommand{\grado}{\hspace{-2mm}$\phantom{a}^{\circ}$}
+\renewcommand{\thealgorithm}{\thechapter.\arabic{algorithm}}% Numeracion de algoritmos  = <chapter>.<algorithm>
+\renewcommand{\arraystretch}{1.5} %ancho de las filas de las tablas
 
 \begin{document}
 
-\tableofcontents
-
 \pagenumbering{Roman}
+\doublespacing
+\tableofcontents
 \listoffigures
 \addcontentsline{toc}{chapter}{Lista de Figuras}
 \listoftables
 \addcontentsline{toc}{chapter}{Lista de Tablas}
+\listofalgorithms
+\addcontentsline{toc}{chapter}{Lista de Algoritmos}
 \include{acronimos}
 \include{simbolos}
 
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
+\singlespacing
 \pagenumbering{arabic}
 \include{introduccion}
-1\include{mineria}
+\include{mineria}
 \include{formulacion}
 \include{resultados}
 \include{conclusiones}
 \include{bibliografia}
 \include{anexos}
+\include{cargahoraria}
 
 \end{document}
