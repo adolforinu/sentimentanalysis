@@ -28,37 +28,43 @@ Abordamos las dos estrategias existentes para el tratamiento del problema de cla
 \item \textbf{Conceptualizar un diccionario de palabras del lenguaje hablado en Paraguay, clasificadas por su orientaci\'on de polaridad como positivas o negativas, que pueda ser utilizado como referencia para futuros trabajos de an\'alisis de sentimientos.}
 \newline
 
-Evaluaci\'on del objetivo.
+Confeccionamos el diccionario mencionado a partir del conjunto de muestra, que luego fue utilizado en un enfoque simple de clasificaci\'on basado en l\'exico con resultados aceptables. Las listas finales de palabras est\'an constituidas por 180 entradas positivas y por 634 entradas negativas, las cuales pueden verse listadas en detalle en el Ap\'endice \ref{Anexos}. Durante el proceso de confecci\'on pudimos observar adem\'as, que no solamente las palabras en espa\~nol y el guaran\'i componen el corpus del lenguaje abordado, sino que adem\'as existe una cantidad de palabras diferentes en ingl\'es mayor a la cantidad de palabras en guaran\'i y una peque\~na cantidad de palabras en portugu\'es (Secci\'on \ref{sec:categorizacion}). Esto implica que el an\'alisis de estrategias basadas en l\'exico no puede limitarse al espa\~nol y al guaran\'i, y que dicha consideraci\'on puede ser \'util adem\'as para paliar las dificultades que representan las ocurrencias \'unicas de las palabras en lenguajes diferentes, es decir, que no se repiten varias veces para los clasificadores de m\'aquina.
 \newline
 
 \item \textbf{Discutir las ventajas y desventajas de la utilizaci\'on del diccionario, adem\'as de las consideraciones pertinentes para su construcci\'on.}
 \newline
 
-Evaluaci\'on del objetivo.
+La ventaja del diccionario consiste en que se puede contar con una lista de palabras y formas b\'asicas, que sean independientes a un conjunto determinado de entrenamiento y por ende, que permitan identificar a cada uno de los atributos de una instancia de evaluaci\'on como conocidos. Por otro lado, la desventaja pasa principalmente por la dependencia de contexto de la mayor\'ia de las palabras, como para clasificarlas por polaridad sin conocimiento previo del contenido a ser evaluado.
 \newline
 
-\item \textbf{Establecer una serie de reglas de preprocesamiento de datos con criterio unificado, que sea aplicable de manera gen\'erica a todas las t\'ecnicas de clasificaci\'on presentadas.} 
-\newline
+\item \textbf{Establecer una serie de reglas de preprocesamiento de datos con criterio unificado, que sean aplicables de manera gen\'erica a todas las t\'ecnicas de clasificaci\'on presentadas.} 
 
-Evaluaci\'on del objetivo.
-\newline
-
-\item \textbf{Desarrollar una t\'ecnica que sea implementada a trav\'es de una herramienta que analice autom\'aticamente los posibles sentimientos de un usuario, expresados en el lenguaje h\'ibrido paraguayo que conjunta t\'erminos de los idiomas espa\~nol y guaran\'i.}
-\newline
-
-Evaluaci\'on del objetivo.
+Ocho reglas de preprocesamiento fueron establecidas como tratamiento previo a los textos para los procedimientos de clasificaci\'on. Se tratan los v\'inculos de Internet, las palabras extendidas, la codificaci\'on de los tuits, los emoticones, las convenciones de lenguaje de la fuente de datos, la acentuaci\'on de palabras, los s\'imbolos y la inclusi\'on de bigramas. Los detalles de dichas reglas se encuentra en la Secci\'on \ref{procedimiento}, y ellas pueden ser utilizadas independientemente al lenguaje al que pertenezcan las palabras tratadas y al algoritmo de clasificaci\'on que sea utilizado posteriormente. 
 \newline
 
 \item \textbf{Proponer una estructura de evaluaci\'on del enfoque utilizado en este trabajo, en funci\'on a los diferentes tipos de entradas que sean requeridas por cada algoritmo.}
 \newline
 
-Evaluaci\'on del objetivo.
+Un conjunto de tres m\'etricas distintas de evaluaci\'on fueron utilizadas, de las cuales dos de ellas (precisi\'on y exhaustividad) ofrecen descripciones diferentes de la utilidad de los resultados, mientras que la tercera consiste en una ponderaci\'on de las anteriores (medida-F). Adem\'as, el proceso de evaluaci\'on fue realizado sistem\'aticamente sobre conjuntos separados de entrenamiento y de evaluaci\'on, as\'i como el proceso de entrenamiento fue llevado a cabo sobre cargas con igual distribuci\'on de clases (balanceadas) y con distribuciones desiguales (desbalanceadas).
+\newline
+
+\item \textbf{Valorar la validez de la propuesta presentada a trav\'es de una comparaci\'on de resultados con trabajos y enfoques similares.}
+\newline
+
+Este comentario ser\'a agregado luego del desarrollo de la secci\'on correspondiente en el cap\'itulo de Resultados.
 \newline
 \end{itemize}
 
 \section{Trabajos futuros}
 
-Aqu\'i creamos una lista de trabajos futuros.
-\newline
+En funci\'on a las conclusiones obtenidas y con el objetivos de futuras mejores, presentamos a continuaci\'on una serie de propuestas que podr\'ian dar continuidad al trabajo.
 
-Alg\'un p\'arrafo de cierre.
+\begin{itemize}
+\item Efectuar un an\'alisis que trate grados de polaridad (escalas m\'as extendidas de positivismo y negativismo) y objetos de referencia de los sentimientos.
+\item Confeccionar un diccionario de entrada m\'as extendido a partir de corpus de texto reales que consideren todos los lenguajes identificados.
+\item Evaluar una estructura multicapas conjuntando los diferentes algoritmos utilizados con el objetivo de elevar el rendimiento.
+\item Incluir funciones de autoentrenamiento a los clasificadores.
+\item Ampliar la aplicaci\'on de aspectos de NLP al problema tratado.
+\end{itemize}
+
+Finalmente, tras la bibliograf\'ia, presentamos en los ap\'endices algunos detalles que ofrecen mayor profundizaci\'on de aspectos espec\'ificos del trabajo.

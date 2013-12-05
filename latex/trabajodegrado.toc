@@ -50,11 +50,11 @@
 \contentsline {subsection}{\numberline {4.3.2}SimpleLogistic}{56}
 \contentsline {section}{\numberline {4.4}M\'aquinas de Soporte Vectorial}{57}
 \contentsline {section}{\numberline {4.5}Comparaciones generales entre m\'etodos}{59}
+\contentsline {section}{\numberline {4.6}Comparaciones con propuestas similares}{59}
 \contentsline {chapter}{\numberline {5}Conclusiones y trabajos futuros}{60}
 \contentsline {section}{\numberline {5.1}Evaluaci\'on de objetivos propuestos}{60}
-\contentsline {section}{\numberline {5.2}Trabajos futuros}{62}
-\contentsline {chapter}{\numberline {6}Bibliograf\'ia}{63}
-\contentsline {chapter}{\numberline {A}Listado de palabras del dominio}{68}
-\contentsline {paragraph}{Aqu\'i podr\'iamos incluir nuestro l\'exico de palabras positivas y negativas, y nuestra lista de stopwords.}{68}
-\contentsline {chapter}{\numberline {B}Carga horaria del proyecto}{69}
-\contentsline {paragraph}{Aqu\'i describimos la carga horaria de trabajo dedicada a este proyecto.}{69}
+\contentsline {section}{\numberline {5.2}Trabajos futuros}{63}
+\contentsline {chapter}{\numberline {6}Bibliograf\'ia}{64}
+\contentsline {chapter}{\numberline {A}Listado de palabras del dominio}{69}
+\contentsline {chapter}{\numberline {B}Carga horaria del proyecto}{76}
+\contentsline {paragraph}{Aqu\'i describimos la carga horaria de trabajo dedicada a este proyecto.}{76}

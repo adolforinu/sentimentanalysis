@@ -39,7 +39,7 @@ Existen adem\'as ciertas convenciones de lenguaje de los tuits:
 
 Es frecuente adem\'as que los tuits vayan acompa\~nados de emoticones y v\'inculos de Web. La influencia de las caracter\'isticas de estos mensajes en nuestra propuesta es abordada en la siguiente secci\'on.
 
-\section{Procedimiento general}
+\section{Procedimiento general}\label{procedimiento}
 El procedimiento seguido para generar los resultados desde los tuits recolectados inicialmente se muestra en la Figura \ref{overview}. Como se puede observar, en algunas etapas del mismo se producen ciertos productos intermedios significativos como el corpus, el l\'exico y el conjunto de entrenamiento antes de llegar a los resultados.
 \newline
 
@@ -150,7 +150,7 @@ Como fue descrito antes, la cantidad de tuits seleccionados para la construcci\'
 
 Con dicha lista disponible, el trabajo manual debi\'o ser realizado. Una de las tareas consisti\'o en determinar la categor\'ia ling\"u\'istica y la categor\'ia l\'exica de cada palabra. Adem\'as, fue desarrollada una lista de palabras con polaridad orientada positivamente y otra lista con aquellas que tienen orientaci\'on negativa.
 
-\subsection{Categorizaci\'on ling\"u\'istica y l\'exica}
+\subsection{Categorizaci\'on ling\"u\'istica y l\'exica}\label{sec:categorizacion}
 
 Las categor\'ias fueron definidas con el fin de determinar la distribuci\'on de las palabras y su influencia en el corpus. Seis categor\'ias ling\"u\'isticas fueron identificadas en el texto: Espa\~nol, Guaran\'i, Jopara, Ingl\'es, Portugu\'es y Emoticones. Las categor\'ias Guaran\'i y Jopara existen separadamente debido a que algunas palabras son genuinas del idioma (podemos encontrarlas en un diccionario de guaran\'i) mientras que otras son palabras del espa\~nol con prefijos o sufijos del guaran\'i. Por ejemplo, en la expresi\'on ``ndaigustoi'' \textit{(no es divertido)} el lema es ``gusto'', una palabra del espa\~nol, mientras que el prefijo ``ndai'' y el sufijo ``i'' indican negaci\'on y provienen del guaran\'i. Entonces, a estas palabras no podemos considerarlas como propias del espa\~nol ni tampoco del guaran\'i, entonces las clasificamos como pertenecientes a la clase Jopara. Existen adem\'as expresiones que presentan el caso inverso, es decir una palabra cuyo lema pertenece al guaran\'i y el sufijo y/o prefijo al espa\~nol, las cuales tambi\'en pertenecen a la misma categor\'ia. Las clases Ingl\'es y Portugu\'es fueron definidas debido a que fueron identificadas palabras provenientes de dichas lenguas durante la generaci\'en del l\'exico. Los resultados de esta categorizaci\'on se muestran en el Cuadro \ref{cat_ling}.
 \newline

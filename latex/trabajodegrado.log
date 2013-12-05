@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.1.11)  1 DEC 2013 20:17
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.1.11)  5 DEC 2013 00:53
 entering extended mode
 **trabajodegrado.tex
 (C:\Users\usuario\Desktop\Tesis\latex\trabajodegrado.tex
@@ -916,7 +916,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
 
-
+[61]
 Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
@@ -927,61 +927,91 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--39
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--42
-
- []
-
-[61]
-Underfull \hbox (badness 10000) in paragraph at lines 43--45
+Underfull \hbox (badness 10000) in paragraph at lines 42--44
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--48
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--51
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
+
+ []
+
+[62]
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--54
+Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--57
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--63
-
- []
-
-) [62] (C:\Users\usuario\Desktop\Tesis\latex\bibliografia.tex
+) [63] (C:\Users\usuario\Desktop\Tesis\latex\bibliografia.tex
 Cap\'{\i }tulo 6.
-[63
+[64
 
 
 
-] [64] [65]
+] [65] [66]
 Overfull \hbox (8.72226pt too wide) in paragraph at lines 28--29
 []\OT1/cmr/m/n/12 Moreno-Ortiz, An-to-nio; Perez-Hernandez, Chan-tal. Uni-ver
 -si-dad de Mala-
  []
 
-[66]) [67] (C:\Users\usuario\Desktop\Tesis\latex\anexos.tex
+[67]) [68] (C:\Users\usuario\Desktop\Tesis\latex\anexos.tex
 Ap\'{e}ndice A.
-) [68
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--9
+
+ []
+
+
+Overfull \hbox (19.56458pt too wide) in paragraph at lines 10--54
+[]$[]$
+ []
+
+
+Overfull \hbox (40.3959pt too wide) in paragraph at lines 10--54
+$[]$ 
+ []
+
+[69
 
 
 
-] (C:\Users\usuario\Desktop\Tesis\latex\cargahoraria.tex
+] [70]
+Underfull \hbox (badness 10000) in paragraph at lines 57--59
+
+ []
+
+
+Overfull \hbox (56.8368pt too wide) in paragraph at lines 91--122
+$[]$ 
+ []
+
+[71]
+Overfull \hbox (54.09612pt too wide) in paragraph at lines 123--154
+$[]$ 
+ []
+
+[72]
+Overfull \hbox (2.97398pt too wide) in paragraph at lines 155--186
+$[]$ 
+ []
+
+[73]) [74] [75] (C:\Users\usuario\Desktop\Tesis\latex\cargahoraria.tex
 Ap\'{e}ndice B.
-) [69
+) [76
 
 
 
@@ -1001,10 +1031,10 @@ Ap\'{e}ndice B.
 ### simple group (level 1) entered at line 9 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 2344 strings out of 494045
- 33378 string characters out of 3148435
- 98212 words of memory out of 3000000
- 5542 multiletter control sequences out of 15000+200000
+ 2346 strings out of 494045
+ 33413 string characters out of 3148435
+ 102236 words of memory out of 3000000
+ 5544 multiletter control sequences out of 15000+200000
  10395 words of font info for 36 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  27i,11n,27p,1732b,525s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1020,9 +1050,9 @@ ts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on trabajodegrado.pdf (78 pages, 732458 bytes).
+Output written on trabajodegrado.pdf (85 pages, 746383 bytes).
 PDF statistics:
- 319 PDF objects out of 1000 (max. 8388607)
+ 342 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
