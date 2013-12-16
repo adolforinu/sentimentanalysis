@@ -28,6 +28,8 @@ public class Main {
 //        bc.run();
           SVMClassifier svmc = new SVMClassifier();
           svmc.run();
+//        MaxEntClassifier mec = new MaxEntClassifier();
+//        mec.run();
     }
 
 }
